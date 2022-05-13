@@ -7,25 +7,25 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <!-- <link 
-            href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-            rel="stylesheet"  type='text/css'> -->
+        <script src="https://kit.fontawesome.com/efee2da8e1.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <main>
         <div class="container">
             <h1>Generate a <br><span class="text-color-mint">random password</span></h1>
             <p>Never use an insecure password again.</p>
-            <button class="generate-btn" onclick="generatePassword()"><i class="fa fa-solid fa-bolt"></i>  Generate passwords</button>
+            <input type="number" id="pwLength" value="10" max="16" min="8">
+            <button type="submit" class="generate-btn" onclick="generatePassword()"><i class="fa-solid fa-bolt"></i>  Generate passwords</button>
+            <p class="pw-length-txt">* choose password length (minimum: 8)</p>
             <hr>
             <div class="columns">
                 <div class="col">
-                    <input type="text" id="password-1" class="password" onclick="copyClipboard(this.value)">
-                    <input type="text" id="password-2" class="password" onclick="copyClipboard(this.value)">
+                    <input type="text" id="password-1" class="password" onclick="copyClipboard(this.value)" placeholder="•••">
+                    <input type="text" id="password-2" class="password" onclick="copyClipboard(this.value)" placeholder="•••">
                 </div>
                 <div class="col">
-                    <input type="text" id="password-3" class="password" onclick="copyClipboard(this.value)">
-                    <input type="text" id="password-4" class="password" onclick="copyClipboard(this.value)">
+                    <input type="text" id="password-3" class="password" onclick="copyClipboard(this.value)" placeholder="•••">
+                    <input type="text" id="password-4" class="password" onclick="copyClipboard(this.value)" placeholder="•••">
                 </div>
             </div>
             <p>Please click a password to copy to clipboard.</p>

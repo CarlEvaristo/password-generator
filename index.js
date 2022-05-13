@@ -34,15 +34,24 @@ function shufflePassword(password) {
 }
 
 function generatePassword() {
-    let pw1 = rndmSmall() + rndmSmall() + rndmSmall() + rndmSmall() + rndmSmall() + rndmCharacter() + rndmNumber() + rndmNumber() + rndmNumber() + rndmSmall()  + rndmSmall() + rndmSmall() + rndmCap() + rndmCap() + rndmCap() + rndmCap() + rndmCharacter() + rndmCharacter()
-    let pw2 = rndmSmall() + rndmSmall() + rndmSmall() + rndmSmall() + rndmSmall() + rndmCharacter() + rndmNumber() + rndmNumber() + rndmNumber() + rndmSmall()  + rndmSmall() + rndmSmall() + rndmCap() + rndmCap() + rndmCap() + rndmCap() + rndmCharacter() + rndmCharacter()
-    let pw3 = rndmSmall() + rndmSmall() + rndmSmall() + rndmSmall() + rndmSmall() + rndmCharacter() + rndmNumber() + rndmNumber() + rndmNumber() + rndmSmall()  + rndmSmall() + rndmSmall() + rndmCap() + rndmCap() + rndmCap() + rndmCap() + rndmCharacter() + rndmCharacter()
-    let pw4 = rndmSmall() + rndmSmall() + rndmSmall() + rndmSmall() + rndmSmall() + rndmCharacter() + rndmNumber() + rndmNumber() + rndmNumber() + rndmSmall()  + rndmSmall() + rndmSmall() + rndmCap() + rndmCap() + rndmCap() + rndmCap() + rndmCharacter() + rndmCharacter()
+    let numDigits = document.getElementById("pwLength").value;
+    passwordEl1.value = ""
+    passwordEl2.value = ""
+    passwordEl3.value = ""
+    passwordEl4.value = ""
+    for (let i=0; i<numDigits; i++) {
+        let passwordDataTypes = [rndmCharacter(), rndmNumber(), rndmSmall(), rndmCap()]
+        passwordEl1.value += passwordDataTypes[Math.floor(Math.random() * 4)]
 
-    passwordEl1.value = shufflePassword(pw1)
-    passwordEl2.value = shufflePassword(pw2)
-    passwordEl3.value = shufflePassword(pw3)
-    passwordEl4.value = shufflePassword(pw4)
+        passwordDataTypes = [rndmCharacter(), rndmNumber(), rndmSmall(), rndmCap()]
+        passwordEl2.value += passwordDataTypes[Math.floor(Math.random() * 4)]
+
+        passwordDataTypes = [rndmCharacter(), rndmNumber(), rndmSmall(), rndmCap()]
+        passwordEl3.value += passwordDataTypes[Math.floor(Math.random() * 4)]
+
+        passwordDataTypes = [rndmCharacter(), rndmNumber(), rndmSmall(), rndmCap()]
+        passwordEl4.value += passwordDataTypes[Math.floor(Math.random() * 4)]
+    } 
 }   
 
 function copyClipboard(value) {
