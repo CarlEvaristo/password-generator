@@ -1,4 +1,62 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #4f527a;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2395c3ff' fill-opacity='0.31' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'Karla', sans-serif;
+    color: #fff;
+}
+h1 {
+    margin-top: 0;
+    font-size:40px;
+}
+p {
+    font-size: 20px;
+}
+hr {
+    border: #4f527a;
+    border-bottom: 3px solid #2F3E53;
+  }
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    background: #1F2937;
+    margin: 40px auto;
+    border: #fff 10px solid;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px black;
+    padding: 52px;
+}
+.text-color-mint {
+    color: #4ADF86;
+}
+.generate-btn {
+    background: #10B981;
+    padding: 9px 20px;
+    color: #fff;
+    font-size:16px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.generate-btn:hover, .generate-btn:focus {
+    background: #059669;
+}
+.generate-btn:active {
+    background: red;
+}
+.password {
+    text-align: center;
+    width: 190px;
+    border:none;
+    background: #273549;
+    padding: 10px 25px;
+    color: #fff;
+    font-size:16px;
+    border-radius: 8px; 
+    margin: 10px; 
+}
+.columns {
+    display: flex;
+    justify-content: space-evenly;
 }
